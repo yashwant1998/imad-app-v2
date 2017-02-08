@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 
-var articleOne ={
+var articleOne.html ={
  title:'Article One I Tanmai Gopal',   
   heading: 'Article One',  
    date:'Sep 5,2016', 
@@ -71,7 +71,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/article-one.html',function(req, res){
-    res.send(createTemplate(articleOne)); 
+    res.send(createTemplate(articleOne.html)); 
     });
 app.get('/article-two',function(req, res){
      res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
